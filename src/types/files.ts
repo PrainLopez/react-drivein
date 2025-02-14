@@ -1,7 +1,7 @@
 export type FileItem = {
   name: string;
   type: "file";
-  url: string;
+  url: string | null;
   size: string;
   modified: string;
 };

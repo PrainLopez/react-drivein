@@ -19,14 +19,14 @@ const mockData: { root: DriveItem[] } = {
             {
               name: "Project A",
               type: "file",
-              url: "#",
+              url: null,
               size: "2.1 MB",
               modified: "2023-05-15",
             },
             {
               name: "Project B",
               type: "file",
-              url: "#",
+              url: null,
               size: "1.8 MB",
               modified: "2023-05-14",
             },
@@ -187,7 +187,7 @@ export default function Home() {
                     {item.name}
                   </button>
                 ) : (
-                  <Link href={item.url} className="hover:underline">
+                  <Link href={item.url ?? "#"} className="hover:underline">
                     {item.name}
                   </Link>
                 )}
